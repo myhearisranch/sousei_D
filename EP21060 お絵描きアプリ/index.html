@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- colorjoeというライブラリを使う。 -->
+    <!-- 使い方: https://github.com/bebraw/colorjoe -->
+    <link rel="stylesheet" href="css/colorjoe.css">
+    <title>draw</title>
+</head>
+<body>
+    <h1>お絵描きアプリ</h1>
+    <canvas
+        id="draw-area"
+        width="400px"
+        height="400px"
+        style="border: 1px solid #000000;">
+    </canvas>
+    <span id="color-palette"></span>
+    <div>
+        <button id = "clear-button">
+            <img src="img/danger.png">
+        </button>
+    </div>
+    <div>
+       <button id ="eraser-button">
+            <img src="img/eraser.jpg">
+       </button>
+    </div>
+    <script src="./js/colorjoe.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
