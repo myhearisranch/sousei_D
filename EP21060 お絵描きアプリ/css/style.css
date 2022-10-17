@@ -1,0 +1,17 @@
+.side-bar{
+    float: right;
+    width: 50%;
+}
+
+/* レイアウトを2分割にする方法:
+https://allabout.co.jp/gm/gc/23836/ */
+
+.buttons  {
+    display: flex;
+    margin: 0 auto;
+}
+
+.buttons > div {
+    margin: 10px;
+}
+
