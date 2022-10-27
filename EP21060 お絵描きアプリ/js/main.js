@@ -85,9 +85,6 @@ window.addEventListener('load', () => {
       // 「○」の線の太さは細くて良いので1で固定
       contextForWidthIndicator.lineWidth = 1;
    
-      // 過去に描画「○」を削除する。過去の「○」を削除しなかった場合は
-      // 過去の「○」が残り続けてします。(以下の画像URLを参照)
-      // https://tsuyopon.xyz/wp-content/uploads/2018/09/line-width-indicator-with-bug.gif
       contextForWidthIndicator.clearRect(0, 0, canvasForWidthIndicator.width, canvasForWidthIndicator.height);
    
       contextForWidthIndicator.beginPath();
@@ -119,6 +116,7 @@ window.addEventListener('load', () => {
       // confirmを使った条件分岐:
       // https://www.sejuku.net/blog/28217
     }
+
   
     //ドラッグの始まり
     function dragStart(event) {
@@ -148,6 +146,7 @@ window.addEventListener('load', () => {
     function initEventHandler() {
 
       //画像ダウンロード機能
+      // https://techceed-inc.com/engineer_blog/8009/
       document.getElementById("downloadPng").addEventListener("click", function () {
         const base64 = canvas.toDataURL({
             format: "png",
@@ -169,6 +168,7 @@ window.addEventListener('load', () => {
       //全消し
       const clearButton = document.querySelector('#clear-button');
       clearButton.addEventListener('click', clear);
+
   
       canvas.addEventListener('mousedown', dragStart);
       canvas.addEventListener('mouseup', dragEnd);
@@ -208,9 +208,16 @@ window.addEventListener('load', () => {
   });
 
   //参考文献:
-  // https://tsuyopon.xyz/2018/09/14/how-to-create-drawing-app-part1/
-  // https://techceed-inc.com/engineer_blog/8009/
 
-  //研究室選び:
-  //学会発表をよくする所(しんどい , 卒論が楽 , 就職も楽 )
-  // 鈴木先生: 知り合いを繋げてくれる
+  // 線を引く機能 , 全消し機能:
+  // https://tsuyopon.xyz/2018/09/14/how-to-create-drawing-app-part1/
+
+  // 色を変える機能 , 消しゴム機能:
+  // https://tsuyopon.xyz/2018/09/15/how-to-create-drawing-app-part2/
+
+  //線の太さを変える機能
+  // https://tsuyopon.xyz/2018/09/16/how-to-create-drawing-app-part3/
+
+
+
+ 
